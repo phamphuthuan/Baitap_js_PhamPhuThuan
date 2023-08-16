@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS --> 
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -94,20 +94,23 @@
               <div class="content">
                 <label for="">Tính tiền lương</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
-                  id="tong-tien"
-                  placeholder=""
+                  id="so_gio_lam"
+                  placeholder="Nhập số giờ làm..."
                 />
                 <br />
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
-                  id="tong-tien"
-                  placeholder=""
+                  id="luong_mot_ngay"
+                  placeholder="Nhập lương một ngày..."
                 />
                 <br />
-                <button>Tính tiền lương</button>
+                <button class="btn btn-danger" onclick="tong_luong()" >Tổng lương</button>
+                <div class="mt-2 alert alert-success">
+                  Kết quả : <span id="tongLuong"></span>
+                </div>
               </div>
             </div>
             <div
@@ -116,7 +119,48 @@
               role="tabpanel"
               aria-labelledby="pills-bai2-tab"
             >
-              2
+            <div class="content">
+              <label for="">Tính giá trị trung bình</label>
+              <input
+                type="number"
+                class="form-control"
+                id="so1"
+                placeholder="Nhậpsố thứ 1 "
+              />
+              <br />
+              <input
+                type="number"
+                class="form-control"
+                id="so2"
+                placeholder="Nhập số thứ 2"
+              />
+              <br />
+              <input
+                type="number"
+                class="form-control"
+                id="so3"
+                placeholder="Nhập số thứ 3"
+              />
+              <br />
+              <input
+                type="number"
+                class="form-control"
+                id="so4"
+                placeholder="Nhập số thứ 4"
+              />
+              <br />
+              <input
+                type="number"
+                class="form-control"
+                id="so5"
+                placeholder="Nhập số thứ 5"
+              />
+              <br />
+              <button class="btn btn-danger" onclick="trung_Binh()" >Tính trung bình</button>
+              <div class="mt-2 alert alert-success">
+                Kết quả : <span id="trungBinh"></span>
+              </div>
+            </div>
             </div>
             <div
               class="tab-pane fade"
@@ -124,15 +168,48 @@
               role="tabpanel"
               aria-labelledby="pills-bai3-tab"
             >
-              3
+            <div class="content">
+            <label for="">Quy đổi tiền tệ</label>
+            <input
+              type="number"
+              class="form-control"
+              id="soTien"
+              placeholder="Nhập vào số tiền USD..."
+            />
+            <br />
+            <button class="btn btn-danger" onclick="quy_doi()" >Quy đổi</button>
+            <div class="mt-2 alert alert-success">
+              Kết quả : <span id="quyDoi"></span>
             </div>
+            </div>
+          </div>
             <div
               class="tab-pane fade"
               id="pills-bai4"
               role="tabpanel"
               aria-labelledby="pills-bai4-tab"
             >
-              4
+            <div class="content">
+            <label for="">Diện tích, chu vi hình chữ nhật</label>
+            <input
+              type="number"
+              class="form-control"
+              id="chieuDai"
+              placeholder="Nhập vào chiều dài..."
+            />
+            <br />
+            <input
+            type="number"
+            class="form-control"
+            id="chieuRong"
+            placeholder="Nhập vào chiều rộng..."
+          />
+          <br />
+            <button class="btn btn-danger" onclick="tinh()" >Tinh</button>
+            <div class="mt-2 alert alert-success">
+              Chu vi: <span id="chuVi"></span>cm  Diện tích: <span id="dienTich"></span>cm²
+            </div>
+          </div>
             </div>
             <div
               class="tab-pane fade"
@@ -140,14 +217,27 @@
               role="tabpanel"
               aria-labelledby="pills-bai5-tab"
             >
-              5
+            <div class="content">
+            <label for="">Tổng 2 ký số</label>
+            <input
+              type="number"
+              class="form-control"
+              id="soNguyen"
+              placeholder="Nhập vào một số nguyên có 2 chữ số..."
+            />
+            <br />
+            <button class="btn btn-danger" onclick="tinhKySo()" >Tính</button>
+            <div class="mt-2 alert alert-success">
+              Kết quả: <span id="tongKySo"></span>
             </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
+    <!-- Optional JavaScript --->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

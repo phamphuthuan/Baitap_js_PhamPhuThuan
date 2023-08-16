@@ -6,19 +6,21 @@
 
 .project {
   width: 65vh;
-  height: 88vh;
+  height: 60vh;
   margin: auto;
   margin-top: 6vh;
 }
 .container {
-  background-image: url(./images/R.jpg);
+  background-image: linear-gradient( pink,rgb(0, 58, 128));
   width: 100%;
   height: 100%;
   border-radius: 16px;
   padding: 2vh;
 }
 
-.project__tab {
+label{
+  font-weight: 700;
+  font-size: large;
 }
 
 ul {
@@ -27,7 +29,7 @@ ul {
 }
 
 .nav {
-  background-color: rgba(240, 248, 255, 0.796);
+  background-color: rgba(255, 255, 255, 0.446);
   /* width: 331px; */
   border-radius: 10px;
 }
@@ -37,5 +39,8 @@ ul {
   text-align: center;
 }
 
-.tap-content {
+.content {
+  background-color: rgba(255, 255, 255, 0.446);
+  padding: 2vh;
+  border-radius: 10px;
 }
